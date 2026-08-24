@@ -1,0 +1,21 @@
+{
+  "_comment": "Last-seen state per source. URLs/titles/dates only - never article text. Stops the next sweep re-reading what this one already rejected. See docs/sources.md 'The sweep'.",
+  "lastSweep": null,
+  "sources": {
+    "yunogami-eetimes": {"tier": 1, "url": "https://eetimes.itmedia.co.jp/ee/series/11164/", "lastSeenUrl": null, "lastSeenDate": null},
+    "yunogami-site":    {"tier": 1, "url": "https://yunogami.net", "lastSeenUrl": null, "lastSeenDate": null},
+    "minamikawa":       {"tier": 1, "url": "https://eetimes.itmedia.co.jp/", "note": "search 南川明", "lastSeenUrl": null, "lastSeenDate": null},
+    "mingchikuo":       {"tier": 1, "url": "https://medium.com/@mingchikuo", "lastSeenUrl": null, "lastSeenDate": null},
+    "trendforce":       {"tier": 1, "url": "https://www.trendforce.com/news/", "lastSeenUrl": null, "lastSeenDate": null},
+    "semiconportal":    {"tier": 2, "url": "https://www.semiconportal.com/", "lastSeenUrl": null, "lastSeenDate": null},
+    "technews-tw":      {"tier": 2, "url": "https://technews.tw/", "lastSeenUrl": null, "lastSeenDate": null},
+    "eettaiwan":        {"tier": 2, "url": "https://www.eettaiwan.com/", "lastSeenUrl": null, "lastSeenDate": null}
+  },
+  "notSwept": {
+    "_comment": "Calendar-driven, not polled. Nothing changes between releases.",
+    "seaj": "mid-month statistics; semiannual forecast mid-Jan and early Jul",
+    "taiwan-monthly-revenue": "by the 10th",
+    "jp-equipment-makers": "quarterly (Tokyo Electron, Disco, SCREEN, Lasertec)"
+  },
+  "blocked": {"x-twitter": "robots.txt", "nikkei": "paywall", "digitimes": "paywall"}
+}

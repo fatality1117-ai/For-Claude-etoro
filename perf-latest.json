@@ -1,0 +1,115 @@
+{
+  "snapshotDate": "2026-08-24",
+  "generatedAtTaipei": "2026-08-25 05:21",
+  "source": "eToro rankings API (daily refresh); max-date = snapshotDate",
+  "self": {
+    "username": "Edwardhwang888",
+    "cid": 13809545,
+    "subType": "pi-rising-star",
+    "copiers": 12,
+    "riskScore": 5,
+    "aumTierDesc": "<$50K",
+    "aumValue": 22858,
+    "gain": {
+      "AbsTwoYears": 1.1036,
+      "LastTwoYears": 1.1036,
+      "CurrYear": 0.2636,
+      "CurrMonth": 0.048499998
+    },
+    "annualizedReturn": 0.22950001,
+    "fiveYearGain": 1.5736,
+    "tenYearGain": 2.3949,
+    "winRatio": 60.5,
+    "note": "thisWeekGain/dailyGain deliberately EXCLUDED - must be pulled live"
+  },
+  "mostCopiedTen": {
+    "period": "AbsTwoYears",
+    "sort": "-copiers",
+    "popularInvestorOnly": true,
+    "rows": [
+      {
+        "username": "thomaspj",
+        "copiers": 26446,
+        "gain": 0.3186,
+        "aumValue": 186239955
+      },
+      {
+        "username": "JeppeKirkBonde",
+        "copiers": 25506,
+        "gain": 0.7445,
+        "aumValue": 285912210
+      },
+      {
+        "username": "triangulacapital",
+        "copiers": 22197,
+        "gain": 0.3992,
+        "aumValue": 87935306
+      },
+      {
+        "username": "CPHequities",
+        "copiers": 16098,
+        "gain": 0.44099998,
+        "aumValue": 56410482
+      },
+      {
+        "username": "Smudliczek",
+        "copiers": 15224,
+        "gain": 1.5583999,
+        "aumValue": 71193683
+      },
+      {
+        "username": "FundManagerZech",
+        "copiers": 11645,
+        "gain": 0.4664,
+        "aumValue": 30102001
+      },
+      {
+        "username": "saifsyn",
+        "copiers": 11370,
+        "gain": 0.533,
+        "aumValue": 92834265
+      },
+      {
+        "username": "Michalhla",
+        "copiers": 10121,
+        "gain": 1.5217999,
+        "aumValue": 41029105
+      },
+      {
+        "username": "jaynemesis",
+        "copiers": 8552,
+        "gain": 0.2696,
+        "aumValue": 37756315
+      },
+      {
+        "username": "defense_investor",
+        "copiers": 8180,
+        "gain": 0.48150003,
+        "aumValue": 17099173
+      }
+    ]
+  },
+  "derivedClaim": {
+    "text": "beats 8 of the 10 most-copied PIs",
+    "window": "AbsTwoYears (exactly two years to snapshotDate)",
+    "beatCount": 8,
+    "outOf": 10,
+    "losesTo": [
+      "Smudliczek",
+      "Michalhla"
+    ],
+    "theirAumRangeUsd": [
+      17099173,
+      285912210
+    ],
+    "mustDisclose": "their AUM scale, and the snapshot date"
+  },
+  "doNotCache": [
+    "positions",
+    "unrealizedPnl",
+    "exposure",
+    "availableCash",
+    "thisWeekGain",
+    "dailyGain"
+  ]
+}

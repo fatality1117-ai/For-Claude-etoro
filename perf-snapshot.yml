@@ -1,0 +1,49 @@
+name: perf-snapshot
+
+# Rebuilds data/perf-latest.json from the eToro rankings API and commits it.
+# Runs on GitHub's own runners, so it is unaffected by any session-side git
+# proxy - this is the part of the pipeline that keeps working with nobody
+# watching. See tools/SNAPSHOT.md.
+
+on:
+  schedule:
+    # 22:00 UTC = 06:00 Taipei, weekdays. Taipei has no DST and this is after
+    # the eToro rankings refresh under both EDT and EST, so it never needs
+    # adjusting. GitHub cron is always UTC.
+    - cron: '0 22 * * 1-5'
+  workflow_dispatch:        # lets you run it by hand from the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: perf-snapshot
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build snapshot
+        env:
+          ETORO_USER_KEY: ${{ secrets.ETORO_USER_KEY }}
+          ETORO_API_KEY: ${{ secrets.ETORO_API_KEY }}
+        run: python tools/snapshot.py --out data
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --staged --quiet; then
+            echo "No change - rankings have not refreshed since the last run."
+            exit 0
+          fi
+          git commit -m "perf snapshot $(date -u +%F)"
+          git push
