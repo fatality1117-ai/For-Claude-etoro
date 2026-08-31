@@ -20,6 +20,7 @@ TEMPLATES = [
     ("SECTOR BRIEF · BIOTECH",         (80,168,138),  "AI-driven discovery",            "sector_biotech"),
     ("SECTOR BRIEF · CYBERSECURITY",(120,158,180),"Network edge & security layer",        "sector_netsec"),
     ("DEEP DIVE",       (198,168,110), "Technical breakdown",              "deepdive"),
+    ("THE ASIA READ",   (196,120,110), "Asia pre-market, scarcity is the engine", "asiaread"),
 ]
 
 def tracked(draw, pos, text, font, fill, tracking=0):

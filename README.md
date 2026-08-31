@@ -1,65 +1,24 @@
 # For-Claude-etoro
 
-Publishing spec and supporting data for the **@Edwardhwang888** eToro Popular
-Investor account. This repo is the single source of truth for how that account
-posts: what it publishes, when, sourced from where, and in what voice.
+eToro Popular Investor **@Edwardhwang888**（AI Alpha）自動化發文系統的公開資產庫。
 
-It is written to be read by an agent at the start of a drafting session. Read
-`docs/SKILL.md` first — everything else hangs off it.
+| 目錄 | 內容 |
+|---|---|
+| `pics/` | 十一張 1080x1080 貼文模板圖，eToro 直接抓 raw URL |
+| `docs/make_templates.py` | 產出 `pics/` 那些圖的生成器。**加新模板改這裡再跑，不要手工做圖** |
+| `spec/` | 現行規格 v3：`flow/` 流程、`modules/` 模組、`standards/` 規範 |
+| `archive/v0.4/` | 2026-08-25 的舊規格與工具，**不再引用**，只留作歷史 |
 
-## Layout
+## 這裡沒有什麼
 
-```
-docs/       the spec
-  SKILL.md        post types, sourcing standard, voice rules, performance
-                  claims, pre-publish checklist, publishing flow
-  schedule.md     posting times, same-day sequencing, the publishing calendar,
-                  the Asia Supply Chain Monitor series
-  brand.md        category template images, colour system, how images attach
-  sources.md      vetted Asian analyst and primary-data sources for THE ASIA READ
-  make_templates.py   regenerates the ten template images
+**沒有任何帳戶數據。** 淨值、精確 AUM、每日報酬序列、部位進場價、執行紀錄
+一律留在 Claude Project 的 `state/`，不進本 repo。理由與檢查清單見
+`spec/standards/repo-sync.md`。
 
-data/       daily performance snapshots
-  perf-latest.json    today's figures; read by SKILL.md 5.1
-  perf-<date>.json    the history
+**本 repo 是公開的。** 推任何東西之前先過 `repo-sync.md` 第三節那三項檢查。
 
-tools/      supporting scripts
-  snapshot.py     builds the daily snapshot from the eToro rankings API
-  SNAPSHOT.md     what the snapshot is for, and its freshness contract
-  parse.py        feed-response parser (tolerates truncated API bodies)
-  hours.py        engagement-by-hour study
-  sig.py          significance tests for the same
+## 正本在哪裡
 
-pics/       the ten 1080x1080 category templates, CC0
-```
-
-## Reading order for a drafting session
-
-1. `docs/SKILL.md` — the rules.
-2. `docs/schedule.md` — what is due today and when it publishes.
-3. `docs/brand.md` — which template image the post carries.
-4. `docs/sources.md` — only when drafting a relay post.
-5. `data/perf-latest.json` — only if the post carries a performance figure, and
-   only when its `snapshotDate` is the current US trading day.
-
-## Two things that are easy to get wrong
-
-**Times are Asia/Taipei; trading days are the US session.** A post recapping the
-Monday US session publishes at 04:00 Taipei on Tuesday and is still "the Monday
-post". `docs/schedule.md` opens with this.
-
-**No performance figure is ever written from memory.** Not from these files, not
-from a previous post. Live call, or today's dated snapshot, or the claim does not
-appear. `docs/SKILL.md` §5.
-
-## Status
-
-Trial — 30-day calibration, 2026-08-24 to 2026-09-22. The spec is being
-corrected as it runs; see `CHANGELOG.md`. Anything marked *unmeasured* or
-*parked* in the docs is exactly that, and should not be built on.
-
-## Licence
-
-Template images in `pics/` are CC0. The specification text is for the operation
-of this one account and is published for transparency, not as general advice.
-Nothing here is investment advice.
+**規格的正本是 Claude Project，不是這裡。** 本 repo 的 `spec/` 是快照，
+由維運 session 手動同步；排程趟次一律不碰這個 repo。
+兩邊不一致時以 Project 為準。

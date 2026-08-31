@@ -1,3 +1,24 @@
+## 2026-08-31 — v0.4 → v3，並補上六天的空窗
+
+**規格在 2026-08-29 砍掉重鍊成 v3，但沒有同步到這裡，本 repo 停在 8/25 的 v0.4 整整六天。**
+原因是改版時把「這個 repo 裡有什麼」的指標整個弄丟了，維運只在 Claude Project 進行。
+連帶後果：2026-08-31 為了補一張模板圖，是拿 `tpl_pulse.png` 逆向去字重排做的，
+而不是跑 `docs/make_templates.py` —— 生成器就在這個 repo 裡，只是沒人記得。
+
+本次變更：
+
+- 新增 `spec/`：現行 v3 規格（`INDEX.md` + `flow/` + `modules/` + `standards/`）
+- 新增 `spec/standards/repo-sync.md`：什麼可以推、`state/` 永遠不推、推前三項檢查
+- 舊的 v0.4 規格與工具移進 `archive/v0.4/`，不再引用
+- **刪除 `perf-latest.json` 與 `perf-2026-08-24.json`** —— 公開 repo 不放精確帳戶數據。
+  注意這只從 HEAD 移除，git 歷史裡仍在
+- `docs/make_templates.py` 補上 `THE ASIA READ` 一筆，與實際的十一張圖一致
+- `pics/tpl_daily.png`：新增乾淨檔名版本。帶前置空格的舊檔暫留，
+  等已發布貼文的 attachment 遷移完才刪
+- README 改寫
+
+---
+
 # Changelog
 
 Notable changes to the spec. Newest first. `docs/SKILL.md` and
