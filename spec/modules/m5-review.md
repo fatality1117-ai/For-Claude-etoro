@@ -26,6 +26,10 @@ M4 的草稿、`standards/` 全部。
 10. 圖片 URL **逐字複製自** `standards/image-templates.md`
 11. 沒有把兩個來源黏成一個主張（`verification-protocol.md` 第零條）
 12. 沒有查核痕跡進本文（`writing-rules.md` §1）
+13. **來源分級**：本文引用或指名的每一個來源，都要在
+    `standards/verification-protocol.md` §5 的第 1-3 級裡。
+    命中禁用清單（Tom's Hardware 這類消費硬體媒體、內容農場、論壇、
+    技術分析媒體）→ **退回 M4**，把那個事實往上游重查或整段拿掉。
 
 ## 失敗行為
 任一項不過 → 退回 M4 修，修完重跑全部 12 項，**不是只重跑失敗那項**。

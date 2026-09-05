@@ -90,7 +90,46 @@ hyperscaler percentage transcript` —— 塞滿詞又指錯季度。
 
 ---
 
+## 五、來源分級（2026-09-05 Ed 裁示）
+
+**讀者是在決定要不要複製 Ed 的散戶投資人，不是要組電腦的人。**
+來源決定一篇文章的身分。引用 DIY／消費電子硬體媒體，等於把投資論述寫成開箱評測。
+
+### 禁用（寫進草稿就是缺陷，M5 直接退回）
+
+Tom's Hardware、Wccftech、VideoCardz、Notebookcheck、TechRadar、PCWorld、
+AnandTech 式的產品評測站、The Verge／Engadget 的消費線報導。
+同列還有：內容農場、Seeking Alpha 之類的個人投稿平台、Reddit 與論壇貼文、
+以線型與目標價為主的技術分析媒體。
+
+**理由不是它們寫錯事實**，是它們的角度是零售消費者的購買決策 ——
+「這張卡值不值得買」。我們寫的是供給約束、產能、商業模式、生態系層次。
+角度不對，事實再正確也會讓整篇掉一個檔次，而且讀者一眼就看得出來。
+
+### 優先序（由高到低）
+
+1. **一手**：公司 IR 新聞稿、**CFO Commentary PDF**、法說會逐字稿與簡報、
+   10-Q／10-K／S-1、政府與監管機構（USGS、EIA、IEA、DOE、METI、經濟部）、
+   產業協會統計（SEMI、SEAJ、WSTS）、交易所公告
+2. **一手產業與研究**：湯之上隆（EE Times Japan）、Mingchi Kuo、TrendForce、
+   SemiAnalysis、公司技術白皮書與規格文件
+3. **專業財經二手**：Reuters、Bloomberg、FT、WSJ、Barron's、
+   TechNews、EE Times Taiwan、Semiconportal
+4. **其他**：預設不用
+
+### 規則
+
+- **一個事實只有第 4 級來源有 → 那個事實不寫。**
+  往上游找一手；找不到就放棄那個點，不准為了湊一句話降格引用。
+- 第 4 級來源**不能拿來當稀缺分的依據**。`standards/authority.md` 的稀缺 2 分
+  定義是「eToro 動態牆與主流英文財經媒體看不到」，
+  消費硬體媒體是全世界都看得到的東西，它不只拿 0 分，還會扣整篇的可信度。
+- 貼文裡出現的來源名稱，要讓讀者覺得「這個人讀的東西跟我不一樣」，
+  而不是「這我自己也看得到」。
+
+---
+
 ## 四、累積，不要每次重查
 
-`claude/figures-ledger.json`：每家公司、每個指標、數值、揭露日期、
+`state/figures-ledger.json`：每家公司、每個指標、數值、揭露日期、
 出自哪一場、原話引用。查到新的一手數字當場寫入。
